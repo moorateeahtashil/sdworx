@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+.display-4 {
+  font-size: 2.0rem;
+}
+
+.emp-bg{
+  background-color: #4a536b;
+  color: white;
+}
+
+.head a{
+  text-decoration:none; 
+  font-weight: bold; 
+  font-size: large;
+  color: #4a536b;
+}
+
+hr{
+  border-top: 1.5px solid black;
+}
+
+.top{
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+  color: #4a536b;
+}
+
+.top a{
+  text-decoration: 7px underline;
+  margin-left: 10px;
+  color: #4a536b;
+}
+
+.emp-card{
+  border: #4a536b;
+  border-radius: 10px;
+}

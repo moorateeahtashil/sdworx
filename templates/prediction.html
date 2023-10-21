@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="{{url_for('static', filename='images/logo.jpg')}}"/>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/predictor.css')}}">
+    <title>Prediction - SDWorx</title>
+    <style>
+      body {
+        font-family: 'Nimbus Sans', sans-serif;
+      }
+      .heading {
+        color: white;
+        background-color: #e94e0f;
+      }
+      body{
+        background-color: white;
+      }
+    </style>
+</head>
+<body>
+
+  <div class="heading">
+    <h1 class="text-center emp-title"><a href="/">SDWorx</a></h1>
+    <hr>
+  </div>
+
+    <div class="container">
+    <table class="table table-light table-striped table-hover table-bordered border-primary">
+        <thead>
+          <tr style="background-color: #4a536b; color: white;">
+            <th scope="col">Parameter</th>
+            <th scope="col">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Employee ID : </th>
+            <td>{{a10}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Satisfaction Level (In Percentage) : </th>
+            <td>{{a1}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Last Evaluation Score (In Percentage) :</th>
+            <td>{{a2}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Number Of Projects : </th>
+            <td>{{a3}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Average Monthly Hours : </th>
+            <td>{{a4}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Number Of Years Spent In The Company : </th>
+            <td>{{a5}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Is There Any Accident While Working ? </th>
+            <td>{{a6}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Is There Any Promotion In Last 5 Years ? </th>
+            <td>{{a7}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Department : </th>
+            <td>{{a8}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Salary Range : </th>
+            <td>{{a9}}</td>
+          </tr>
+        </tbody>
+    </table>
+
+    <div class="alert d-flex justify-content-between" role="alert" style="background-color: #4a536b; color: white;">
+       <div class="m-1">{{y}}</div>
+       <div><button type="button" class="btn btn-light btn-sm m-1"><a href="/predictor" style="color: black; text-decoration: none;">Predict Again</a></button>
+      <button type="button" class="btn btn-light btn-sm m-1"><a href="/" style="color: black; text-decoration: none;">Back To Home</a></button>
+      </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

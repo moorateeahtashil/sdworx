@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="{{url_for('static', filename='images/logo.jpg')}}" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/predictor.css')}}">
+  <style>
+    body {
+      font-family: 'Nimbus Sans', sans-serif;
+    }
+    .heading {
+      color: white;
+      background-color: #e94e0f;
+    }
+    body{
+      background-color: white;
+    }
+  </style>
+  <title>Predictor - SDWorx Prediction System</title>
+</head>
+<body>
+  <div class="heading">
+    <h1 class="text-center emp-title"><a href="/">SDWorx</a></h1>
+    <hr>
+  </div>
+
+  <form action="/prediction" method="POST" class="container">
+    <div class="row m-2 mt-5">
+      <div class="form-group p-1 col-lg-6 col-xs-12 col-sm-12 col-md-6">
+        <label for="empid">Enter Employee ID *</label>
+        <input type="text" class="form-control" id="empid" name="empid" placeholder="Enter Employee ID" required>
+      </div>
+      <div class="form-group p-1 col-lg-6 col-xs-12 col-sm-12 col-md-6">
+          <label for="satisfaction">Enter Satisfaction Level (In Percentage) *</label>
+          <input type="text" class="form-control" id="satisfaction" name="satisfaction" placeholder="Enter Satisfaction Level (In Percentage)" required>
+      </div>
+      <div class="form-group p-1 col-lg-6 col-xs-12 col-sm-12 col-md-6">
+          <label for="evaluation">Enter Last Evaluation Score (In Percentage) *</label>
+          <input type="text" class="form-control" id="evaluation" name="evaluation" placeholder="Enter Last Evaluation Score (In Percentage)" required>
+      </div>
+      <div class="form-group p-1 col-lg-6 col-xs-12 col-sm-12 col-md-6">
+          <label for="projects">Enter Number Of Projects *</label>
+          <input type="text" class="form-control" id="projects" name="projects" placeholder="Enter Number Of Projects" required>
+      </div>
+      <div class="form-group p-1 col-lg-6 col-xs-12 col-sm-12 col-md-6">
+          <label for="hours">Enter Average Monthly Hours *</label>
+          <input type="text" class="form-control" id="hours" name="hours" placeholder="Enter Average Monthly Hours" required>
+      </div>
+      <div class="form-group p-1 col-lg-6 col-xs-12 col-sm-12 col-md-6">
+          <label for="years">Enter Number Of Years Spent In The Company *</label>
+          <input type="text" class="form-control" id="years" name="years" placeholder="Enter Number Of Years Spent In The Company" required>
+      </div>
+      <div class="form-group p-1 col-lg-6 col-xs-12 col-sm-12 col-md-6">
+          <label for="accident">Is There Any Accident While Working ? *</label>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="accident" id="accident1" value="1" required>
+              <label class="form-check-label" for="accident1">
+               Yes
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="accident" id="accident2" value="0" required>
+              <label class="form-check-label" for="accident2">
+                No
+              </label>
+          </div>
+      </div>
+      <div class="form-group p-1 col-lg-6 col-xs-12 col-sm-12 col-md-6">
+          <label for="promotion">Is There Any Promotion In Last 5 Years ? *</label>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="promotion" id="promotion1" value="1" required>
+              <label class="form-check-label" for="promotion1">
+               Yes
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="promotion" id="promotion2" value="0" required>
+              <label class="form-check-label" for="promotion2">
+                No
+              </label>
+          </div>
+      </div>
+      <div class="form-group p-1 col-lg-6 col-xs-12 col-sm-12 col-md-6">
+          <label for="department">Enter Department *</label>
+          <select class="custom-select mr-sm-2" id="department" name="department" required>
+              <option value="">Choose...</option>
+              <option value="accounting">Accounting</option>
+              <option value="hr">HR</option>
+              <option value="IT">IT</option>
+              <option value="management">Management</option>
+              <option value="marketing">Marketing</option>
+              <option value="product_mng">Product Management</option>
+              <option value="RandD">R & D</option>
+              <option value="sales">Sales</option>
+              <option value="support">Support</option>
+              <option value="technical">Technical</option>
+          </select>
+      </div>
+      <div class="form-group p-1 col-lg-6 col-xs-12 col-sm-12 col-md-6">
+          <label for="salary">Enter Salary Range *</label>
+          <select class="custom-select mr-sm-2" id="salary" name="salary" required>
+              <option value="">Choose...</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+          </select>
+      </div>
+      <div class="col-12 text-center mt-4"><button type="submit" class="btn btn-secondary button-predict">Predict</button></div>
+      <div class="col-12 text-center my-2"><a class="btn btn-secondary button-predict" type="button" href="/">Back</a></div>
+      </div>
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
